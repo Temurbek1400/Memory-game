@@ -1,0 +1,86 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background: url(./images/walpper.jpg) no-repeat center;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#boxes {
+  min-width: 450px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+  grid-gap: 30px;
+  grid-column-gap: 50px;
+}
+.header {
+  text-align: center;
+}
+.box {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  transform-style: preserve-3d;
+  /* transform: rotateX(180deg); */
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.front,.back {
+  position: absolute;
+  border-radius: 10%;
+  width: 120px;
+  height: 120px;
+  background: no-repeat center;
+  background-size: cover;
+  border: 1px rgb(71, 71, 71) dashed;
+}
+.back {
+  position: absolute;
+  z-index: 2;
+}
+.front {
+  z-index: -1;
+  transform-style: preserve-3d;
+  transform: rotateX(180deg);
+}
+.show {
+  transform: rotateX(180deg);
+}
+.clicks {
+  border-radius: 7px;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+}
+#click_count {
+  color: black;
+}
+
+
+
+.load_data {
+  z-index: 99;
+  width: 400px;
+  text-align: center;
+  color: #fff;
+  margin: 50px auto;
+}
+
+
+
+
+
