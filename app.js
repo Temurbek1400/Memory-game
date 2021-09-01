@@ -83,4 +83,4 @@ setTimeout(() => {
       renderBoxes();
     }
     startApp();
-}, 30000);
+}, 12000);
